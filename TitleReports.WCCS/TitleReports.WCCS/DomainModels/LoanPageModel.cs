@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TitleReports.WCCS.DomainModels;
+
+public class LoanPageModel
+{
+    // Header Information. 
+    public string Client { get; set; }
+    public string SearchDate { get; set; }
+    public string Project { get; set; }
+    public string LoanNumber { get; set; }
+    public string FileNumber { get; set; }
+
+    //Data tape information. 
+    public string BorrowerName { get; set; }
+    public string PropertyStreet { get; set; }
+    public string PropertyCity { get; set; }
+    public string PropertyState { get; set; }
+    public string PropertyZip { get; set; }
+    public string PropertyCounty { get; set; }
+
+    public string LoanAmount { get; set; }
+    public string OriginationDate { get; set; }
+
+    // TITLE FLAGS.
+    public string LienPosition { get; set; }
+    public string VestingIssue { get; set; }
+    public string AOMChainIssue { get; set; }
+    public string JudgmentBeforeLien { get; set; }
+    public string JudgmentAmount { get; set; }
+    public string MuniLien { get; set; }
+    public string MuniAmount { get; set; }
+    public string HOASuperLien { get; set; }
+    public string HOAAmount { get; set; }
+    public string Notes { get; set; }
+}

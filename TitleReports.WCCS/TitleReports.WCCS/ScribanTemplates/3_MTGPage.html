@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mortgage and AOM Information</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 40px;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #000;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            width: 720px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+            margin: 20px 0 5px;
+            text-transform: uppercase;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: separate;
+            margin-bottom: 20px;
+            border: 1.8px solid #51286F;
+            border-radius: 6px;
+        }
+
+            .info-table td {
+                padding: 3px 5px;
+                vertical-align: top;
+                border: none;
+                line-height: 1.1;
+                font-size: 13px;
+            }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .tight-cell {
+            padding: 0 !important;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            font-style: italic;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <table style="width: 100%; margin-bottom: 15px;">
+            <tr>
+                <td style="text-align: center;"><img src="../Logo/IS Logo.png" /></td>
+                <td style="text-align: right;"></td>
+            </tr>
+        </table>
+
+        <table class="info-table">
+            <tr>
+                <td><span class="label">Client:</span> {{ Client }}</td>
+                <td style="text-align: right;"><span class="label">Search Date:</span> {{ SearchDate }}</td>
+            </tr>
+            <tr>
+                <td><span class="label">Project:</span> {{ Project }}</td>
+                <td style="text-align: right;">
+                    <span class="label">Loan Number:</span> {{ LoanNumber }}<br />
+                    <span class="label">Grid151 File Number:</span> {{ FileNumber }}
+                </td>
+            </tr>
+        </table>
+
+        <div class="section-title">MORTGAGE / DEED OF TRUST / LIEN INFORMATION</div>
+
+        <table class="info-table">
+            <tr style="text-align:center;"><td colspan="4"><span class="label">{{ MTG.Title }}</span></td></tr>
+        </table>
+
+        <table class="info-table">
+            <tr>
+                <td><span class="label">Type of Instrument:</span> {{ MTG.InstrumentType }}</td>
+                <td><span class="label">Amount:</span> {{ MTG.Amount }}</td>
+            </tr>
+            <tr><td colspan="2"><span class="label">Borrower/Mortgagor:</span> {{ MTG.Borrower }}</td></tr>
+            <tr><td colspan="2"><span class="label">Lender/Beneficiary:</span> {{ MTG.Lender }}</td></tr>
+            <tr>
+                <td colspan="2">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td class="tight-cell"><span class="label">Dated:</span> {{ MTG.Dated }}</td>
+                            <td class="tight-cell"><span class="label">Recorded:</span> {{ MTG.Recorded }}</td>
+                            <td class="tight-cell"><span class="label">Maturity:</span> {{ MTG.Maturity }}</td>
+                            <td class="tight-cell"><span class="label">Open Ended:</span> {{ MTG.OpenEnded }}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td class="tight-cell"><span class="label">Book:</span> {{ MTG.Book }}</td>
+                            <td class="tight-cell"><span class="label">Page:</span> {{ MTG.Page }}</td>
+                            <td class="tight-cell"><span class="label">Instrument:</span> {{ MTG.Instrument }}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td colspan="4"><span class="label">Notes:</span> {{ MTG.Notes }}</td></tr>
+        </table>
+
+        <div class="section-title">ASSIGNMENT OF MORTGAGE</div>
+
+        {% for aom in AOMs %}
+        <table class="info-table">
+            <tr><td colspan="2"><span class="label">{{ for.index + 1 }}. AOM From:</span> {{ aom.From }}</td></tr>
+            <tr><td colspan="2"><span class="label">{{ for.index + 1 }}. AOM To:</span> {{ aom.To }}</td></tr>
+            <tr><td><span class="label">Dated:</span> {{ aom.Dated }}</td><td><span class="label">Recorded:</span> {{ aom.Recorded }}</td></tr>
+            <tr>
+                <td colspan="3">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td class="tight-cell"><span class="label">Book:</span> {{ aom.Book }}</td>
+                            <td class="tight-cell"><span class="label">Page:</span> {{ aom.Page }}</td>
+                            <td class="tight-cell"><span class="label">Instrument:</span> {{ aom.Instrument }}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style="height: 10px;"></tr>
+        </table>
+        {% end %}
+    </div>
+
+    <footer>
+        <div>
+            <div>401 Plymouth Road | Suite 500 | Plymouth Meeting PA 19462</div>
+            <div>Phone: 844.316.3468 &nbsp;|&nbsp; Fax: 844.316.9469</div>
+            <div>investorservices@grid151.com &nbsp;|&nbsp; www.grid151.com</div>
+        </div>
+    </footer>
+</body>
+</html>

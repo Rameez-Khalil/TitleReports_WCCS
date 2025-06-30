@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "77sf/gaF+i8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\TitleReports.WCCS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LENOVO\\.nuget\\packages\\scriban\\6.2.1\\scriban.6.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
