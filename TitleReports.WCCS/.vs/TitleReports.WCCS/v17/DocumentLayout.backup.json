@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\scribantemplates\\3_mtgpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\scribantemplates\\3_mtgpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\scribantemplates\\4_judgmentpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\scribantemplates\\4_judgmentpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\scribantemplates\\2_vestingpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\scribantemplates\\2_vestingpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\scribantemplates\\5_disclosurepage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\scribantemplates\\5_disclosurepage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\scribantemplates\\1_loanpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\scribantemplates\\1_loanpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\domainmodels\\loanpagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\domainmodels\\loanpagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\titlereports.wccs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\titlereports.wccs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\templates\\wccstemplate._loanpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\templates\\wccstemplate._loanpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\templates\\wccstemplate_vestingpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\templates\\wccstemplate_vestingpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -23,16 +55,8 @@
       "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\templates\\wccstemplate_disclosure.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\templates\\wccstemplate._loanpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\templates\\wccstemplate._loanpage.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|c:\\users\\lenovo\\desktop\\wltic\\titlereportsautomation\\titlereports.wccs\\titlereports.wccs\\titlereports.wccs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{54F18975-9FF4-4686-BAD8-37441826BAF2}|TitleReports.WCCS\\TitleReports.WCCS.csproj|solutionrelative:titlereports.wccs\\titlereports.wccs.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,35 +66,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WCCSTemplate_MTGPage_Updated.html",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
-              "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
-              "RelativeToolTip": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowCQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "5_DisclosurePage.html",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\5_DisclosurePage.html",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\ScribanTemplates\\5_DisclosurePage.html",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\5_DisclosurePage.html",
+              "RelativeToolTip": "TitleReports.WCCS\\ScribanTemplates\\5_DisclosurePage.html",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-05T16:33:28.622Z"
+              "WhenOpened": "2025-06-30T17:48:32.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "4_JudgmentPage.html",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\4_JudgmentPage.html",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\ScribanTemplates\\4_JudgmentPage.html",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\4_JudgmentPage.html",
+              "RelativeToolTip": "TitleReports.WCCS\\ScribanTemplates\\4_JudgmentPage.html",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAYwGkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-30T17:46:15.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WCCSTemplate_MTGPage.html",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
-              "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
-              "RelativeToolTip": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAAAGwAAAARAAAAAAAAAA==",
+              "Title": "2_VestingPage.html",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\2_VestingPage.html",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\ScribanTemplates\\2_VestingPage.html",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\2_VestingPage.html",
+              "RelativeToolTip": "TitleReports.WCCS\\ScribanTemplates\\2_VestingPage.html",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-05T15:04:02.283Z"
+              "WhenOpened": "2025-06-30T17:42:57.412Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "3_MTGPage.html",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\3_MTGPage.html",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\ScribanTemplates\\3_MTGPage.html",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\3_MTGPage.html",
+              "RelativeToolTip": "TitleReports.WCCS\\ScribanTemplates\\3_MTGPage.html",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAYwJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-30T17:41:46.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoanPageModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\DomainModels\\LoanPageModel.cs",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\DomainModels\\LoanPageModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\DomainModels\\LoanPageModel.cs",
+              "RelativeToolTip": "TitleReports.WCCS\\DomainModels\\LoanPageModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T17:31:14.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "1_LoanPage.html",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\1_LoanPage.html",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\ScribanTemplates\\1_LoanPage.html",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\ScribanTemplates\\1_LoanPage.html",
+              "RelativeToolTip": "TitleReports.WCCS\\ScribanTemplates\\1_LoanPage.html",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-30T17:16:28.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "WCCSTemplate_VestingPage.html",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_VestingPage.html",
               "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate_VestingPage.html",
@@ -83,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "WCCSTemplate_Disclosure.html",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_Disclosure.html",
               "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate_Disclosure.html",
@@ -91,11 +169,12 @@
               "RelativeToolTip": "TitleReports.WCCS\\Templates\\WCCSTemplate_Disclosure.html",
               "ViewState": "AgIAABEAAAAAAAAAAAAIwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-17T17:49:02.192Z"
+              "WhenOpened": "2025-06-17T17:49:02.192Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "WCCSTemplate_JudgmentPage.html",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_JudgmentPage.html",
               "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate_JudgmentPage.html",
@@ -103,35 +182,64 @@
               "RelativeToolTip": "TitleReports.WCCS\\Templates\\WCCSTemplate_JudgmentPage.html",
               "ViewState": "AgIAAB0AAAAAAAAAAAAowC0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-06-17T17:19:08.672Z"
+              "WhenOpened": "2025-06-17T17:19:08.672Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "WCCSTemplate._LoanPage.html",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate._LoanPage.html",
               "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate._LoanPage.html",
               "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate._LoanPage.html",
               "RelativeToolTip": "TitleReports.WCCS\\Templates\\WCCSTemplate._LoanPage.html",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAcwJUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-31T20:52:28.471Z"
+              "WhenOpened": "2025-05-31T20:52:28.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "TitleReports.WCCS.csproj",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\TitleReports.WCCS.csproj",
               "RelativeDocumentMoniker": "TitleReports.WCCS\\TitleReports.WCCS.csproj",
               "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\TitleReports.WCCS.csproj",
               "RelativeToolTip": "TitleReports.WCCS\\TitleReports.WCCS.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-31T20:37:08.362Z"
+              "WhenOpened": "2025-05-31T20:37:08.362Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
+              "Title": "WCCSTemplate_MTGPage.html",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
+              "RelativeToolTip": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage.html",
+              "ViewState": "AgIAAFkAAAAAAAAAAABBwGwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-05T15:04:02.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WCCSTemplate_MTGPage_Updated.html",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
+              "RelativeDocumentMoniker": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
+              "RelativeToolTip": "TitleReports.WCCS\\Templates\\WCCSTemplate_MTGPage_Updated.html",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-05T16:33:28.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\WLTIC\\TItleReportsAutomation\\TitleReports.WCCS\\TitleReports.WCCS\\Program.cs",
               "RelativeDocumentMoniker": "TitleReports.WCCS\\Program.cs",
@@ -139,7 +247,8 @@
               "RelativeToolTip": "TitleReports.WCCS\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T20:37:01.987Z"
+              "WhenOpened": "2025-05-31T20:37:01.987Z",
+              "EditorCaption": ""
             }
           ]
         }

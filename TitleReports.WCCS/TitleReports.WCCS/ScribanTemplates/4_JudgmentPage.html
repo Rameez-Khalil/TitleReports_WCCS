@@ -9,9 +9,11 @@
             margin: 40px;
         }
 
+        /* --- Layout helpers --- */
         html, body {
             height: 100%;
             margin: 0;
+            padding: 0;
         }
 
         body {
@@ -23,11 +25,12 @@
         }
 
         .content-wrapper {
-            flex: 1;
+            flex: 1 0 auto;
             width: 720px;
             margin: auto;
         }
 
+        /* --- Visual styles --- */
         .section-title {
             font-weight: bold;
             font-size: 15px;
@@ -39,23 +42,29 @@
         .info-table {
             width: 100%;
             border-collapse: separate;
+            margin-bottom: 20px;
             border: 1.8px solid #51286F;
             border-radius: 6px;
-            margin-bottom: 20px;
         }
 
             .info-table td {
-                padding: 8px 12px;
+                padding: 3px 5px;
                 vertical-align: top;
-                line-height: 1.6;
+                line-height: 1.1;
                 font-size: 13px;
+                border: none;
             }
 
         .label {
             font-weight: bold;
         }
 
+        .spacer-row td {
+            padding-top: 10px;
+        }
+
         footer {
+            flex-shrink: 0;
             text-align: center;
             font-size: 12px;
             font-style: italic;
@@ -66,17 +75,23 @@
 </head>
 <body>
     <div class="content-wrapper">
+        <!-- Logo -->
         <table style="width: 100%; margin-bottom: 15px;">
             <tr>
-                <td style="text-align: center;"><img src="../Logo/IS Logo.png" /></td>
+                <td style="text-align: center;">
+                    <img src="../Logo/IS Logo.png" />
+                </td>
                 <td style="text-align: right;"></td>
             </tr>
         </table>
 
+        <!-- Header info -->
         <table class="info-table">
             <tr>
                 <td><span class="label">Client:</span> {{ Client }}</td>
-                <td style="text-align: right;"><span class="label">Search Date:</span> {{ SearchDate }}</td>
+                <td style="text-align: right;">
+                    <span class="label">Search Date:</span> {{ SearchDate }}
+                </td>
             </tr>
             <tr>
                 <td><span class="label">Project:</span> {{ Project }}</td>
@@ -87,32 +102,41 @@
             </tr>
         </table>
 
+        <!-- Title -->
         <div class="section-title">JUDGMENT INFORMATION</div>
 
-        {% for judgment in Judgments %}
-        <table class="info-table">
-            <tr><td><span class="label">Creditor:</span> {{ judgment.Creditor }}</td></tr>
-            <tr><td><span class="label">Debtor:</span> {{ judgment.Debtor }}</td></tr>
-            <tr><td><span class="label">Amount:</span> {{ judgment.Amount }}</td></tr>
-            <tr><td><span class="label">Docket Number:</span> {{ judgment.DocketNumber }}</td></tr>
-            <tr><td><span class="label">Dated:</span> {{ judgment.Dated }}</td></tr>
-            <tr><td><span class="label">Recorded:</span> {{ judgment.Recorded }}</td></tr>
-            <tr>
-                <td>
-                    <span class="label">Book:</span> {{ judgment.Book }} &nbsp;&nbsp;&nbsp;
-                    <span class="label">Page:</span> {{ judgment.Page }}
-                </td>
-            </tr>
+        <!-- Judgments loop -->
+        <table class="info-table" style="margin-bottom:5px">
+            {% for jdg in Judgments %}
+            <tbody class="judgment-entry">
+                <tr>
+                    <td><span class="label">{{ for.index_plus1 }}. Type:</span> {{ jdg.Type }}</td>
+                    <td><span class="label">Amount:</span> {{ jdg.Amount }}</td>
+                    <td><span class="label">Dated:</span> {{ jdg.Dated }}</td>
+                    <td><span class="label">Recorded:</span> {{ jdg.Recorded }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><span class="label">Against:</span> {{ jdg.Against }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><span class="label">In Favor Of:</span> {{ jdg.InFavorOf }}</td>
+                </tr>
+                <tr>
+                    <td><span class="label">Recording Book:</span> {{ jdg.Book }}</td>
+                    <td><span class="label">Page:</span> {{ jdg.Page }}</td>
+                    <td colspan="2"><span class="label">Instrument:</span> {{ jdg.Instrument }}</td>
+                </tr>
+                <tr class="spacer-row"><td colspan="4">&nbsp;</td></tr>
+            </tbody>
+            {% end %}
         </table>
-        {% end %}
     </div>
 
+    <!-- Footer -->
     <footer>
-        <div>
-            <div>401 Plymouth Road | Suite 500 | Plymouth Meeting PA 19462</div>
-            <div>Phone: 844.316.3468 &nbsp;|&nbsp; Fax: 844.316.9469</div>
-            <div>investorservices@grid151.com &nbsp;|&nbsp; www.grid151.com</div>
-        </div>
+        <div>401 Plymouth Road&nbsp;|&nbsp;Suite&nbsp;500&nbsp;|&nbsp;Plymouth&nbsp;Meeting&nbsp;PA&nbsp;19462</div>
+        <div>Phone:&nbsp;844.316.3468&nbsp;|&nbsp;Fax:&nbsp;844.316.9469</div>
+        <div>investorservices@grid151.com&nbsp;|&nbsp;www.grid151.com</div>
     </footer>
 </body>
 </html>

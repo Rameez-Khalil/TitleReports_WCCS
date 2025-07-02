@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TitleReports.WCCS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c3667e4b82f8cd6a6ae5a834c722019c7583353")]
 [assembly: System.Reflection.AssemblyProductAttribute("TitleReports.WCCS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TitleReports.WCCS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
