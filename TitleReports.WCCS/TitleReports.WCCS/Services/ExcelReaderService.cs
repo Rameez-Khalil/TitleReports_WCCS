@@ -2,45 +2,92 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TitleReports.WCCS.Services;
-
-public class ExcelReaderService
+namespace TitleReports.WCCS.Services
 {
-    public List<LoanPageModel> ReadLoanData(string filepath)
+    public class ExcelReaderService
     {
-        var loanData = new List<LoanPageModel>();
-
-        using (var workbook = new XLWorkbook(filepath))
+        public List<LoanPageModel> ReadLoanData(string filepath)
         {
-            var worksheet = workbook.Worksheet("Loans");
-            var rows = worksheet.RangeUsed().RowsUsed(); 
+            var loanData = new List<LoanPageModel>();
 
-            foreach(var row in rows.Skip(1)) //skipping the header row. 
+            using (var workbook = new XLWorkbook(filepath))
             {
-                //gernate the model.
-                var model = new LoanPageModel
+                var worksheet = workbook.Worksheets.First();
+                var rows = worksheet.RangeUsed().RowsUsed().ToList();
+
+                if (rows.Count < 2)
+                    return loanData;
+
+                var headerRow = rows[0];
+                var columnMap = new Dictionary<string, int>();
+
+                // Map header names to column indices
+                for (int i = 1; i <= headerRow.CellCount(); i++)
                 {
-                    Client = row.Cell(1).GetString(),
-                    SearchDate = row.Cell(2).GetString(),
-                    Project = row.Cell(3).GetString(),
-                    LoanNumber = row.Cell(4).GetString(),
-                    FileNumber = row.Cell(5).GetString(),
+                    var header = headerRow.Cell(i).GetString().Trim();
+                    if (!string.IsNullOrEmpty(header) && !columnMap.ContainsKey(header))
+                    {
+                        columnMap[header] = i;
+                    }
+                }
 
-                    // Add other LoanPageModel-specific properties below as needed
-                    BorrowerName = row.Cell(6).GetString(),
-                    PropertyAddress = row.Cell(7).GetString(),
+                foreach (var row in rows.Skip(1)) // skip header
+                {
+                    var model = new LoanPageModel
+                    {
+                        Client = GetValue(row, columnMap, "Client"),
+                        SearchDate = GetDateOnly(row, columnMap, "Search Date"),
+                        Project = GetValue(row, columnMap, "Project"),
+                        LoanNumber = GetValue(row, columnMap, "Servicer Loan ID"),
+                        FileNumber = GetValue(row, columnMap, "Collateral ID"),
 
-                };
-                loanData.Add(model);
+                        BorrowerName = GetValue(row, columnMap, "Borrower Name"),
+                        PropertyAddress = GetValue(row, columnMap, "Property Address"),
+                        PropertyCity = GetValue(row, columnMap, "City"),
+                        PropertyState = GetValue(row, columnMap, "State"),
+                        PropertyZip = GetValue(row, columnMap, "Zipcode"),
+                        PropertyCounty = GetValue(row, columnMap, "County"),
 
+                        LoanAmount = GetValue(row, columnMap, "Loan Amount"),
+                        OriginationDate = GetDateOnly(row, columnMap, "Origination Date"),
+                        LienPosition = GetValue(row, columnMap, "Lien Position"),
+                        VestingIssue = GetValue(row, columnMap, "Vesting Issue"),
+                        AOMChainIssue = GetValue(row, columnMap, "AOM Chain Issues Summary"),
+
+                        JudgmentBeforeLien = GetValue(row, columnMap, "Judgments Before Target"),
+                        JudgmentAmount = GetValue(row, columnMap, "Total Judgments Before Lien"),
+                        
+                        MuniLien = GetValue(row, columnMap, "Muni Lien"),
+                        MuniAmount = GetValue(row, columnMap, "Muni Amount"),
+
+                        HOASuperLien = GetValue(row, columnMap, "HOA Superlien"),
+                        HOAAmount = GetValue(row, columnMap, "HOA Amount"),
+
+                        Notes = GetValue(row, columnMap, "Notes")
+                    };
+
+                    loanData.Add(model);
+                }
             }
+
+            return loanData;
         }
 
+        private string GetValue(IXLRangeRow row, Dictionary<string, int> map, string columnName)
+        {
+            return map.ContainsKey(columnName)
+                ? row.Cell(map[columnName]).GetString().Trim()
+                : string.Empty;
+        }
 
-        return loanData; 
+        private string GetDateOnly(IXLRangeRow row, Dictionary<string, int> map, string columnName)
+        {
+            if (!map.ContainsKey(columnName))
+                return string.Empty;
+
+            var raw = row.Cell(map[columnName]).GetString().Trim();
+            return raw.Split(' ')[0]; // removes time part
+        }
     }
-
 }
