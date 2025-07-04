@@ -1,4 +1,5 @@
-﻿using TitleReports.WCCS.Services;
+﻿using ClosedXML.Excel;
+using TitleReports.WCCS.Services;
 
 class Program
 {
@@ -7,12 +8,16 @@ class Program
         Console.WriteLine("Please provide the data file path");
         string filePath = Console.ReadLine();
 
+
+        //workbook object. 
+        var workbook = new XLWorkbook(filePath); 
         var reader = new ExcelReaderService();
-        var loans = reader.ReadLoanData(filePath);
+        var loanDataSet = reader.ReadLoanData(workbook);
+        var vestingDataSet = reader.ReadVestingData(workbook);
 
-        Console.WriteLine($"Total loans found: {loans.Count}");
+        Console.WriteLine($"Total loans found: {loanDataSet.Count}");
 
-        foreach (var loan in loans)
+        foreach (var loan in loanDataSet)
         {
             Console.WriteLine("--------------------------------------------------------------------------------");
             Console.WriteLine($"Loan Number: {loan.LoanNumber}");
@@ -39,6 +44,27 @@ class Program
             Console.WriteLine($"HOA Amount: {loan.HOAAmount}");
             Console.WriteLine($"Notes: {loan.Notes}");
             Console.WriteLine("--------------------------------------------------------------------------------");
+
+            var vesting = vestingDataSet.FirstOrDefault(v =>
+               v.LoanNumber == loan.LoanNumber &&
+               v.FileNumber == loan.FileNumber);
+
+            if (vesting != null && vesting.Vesting != null)
+            {
+                Console.WriteLine("---- Vesting Details ----");
+                Console.WriteLine($"Type of Deed:     {vesting.Vesting.TypeOfDeed}");
+                Console.WriteLine($"Grantee:          {vesting.Vesting.Grantee}");
+                Console.WriteLine($"Grantor:          {vesting.Vesting.Grantor}");
+                Console.WriteLine($"Dated:            {vesting.Vesting.Dated}");
+                Console.WriteLine($"Recorded:         {vesting.Vesting.Recorded}");
+                Console.WriteLine($"Book:             {vesting.Vesting.Book}");
+                Console.WriteLine($"Page:             {vesting.Vesting.Page}");
+                Console.WriteLine($"Instrument #:     {vesting.Vesting.Instrument}");
+            }
+            else
+            {
+                Console.WriteLine("No vesting details found for this loan.");
+            }
         }
 
         Console.WriteLine("Press any key to exit...");
