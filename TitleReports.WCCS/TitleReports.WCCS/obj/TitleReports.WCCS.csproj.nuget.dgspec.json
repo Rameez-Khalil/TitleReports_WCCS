@@ -54,6 +54,14 @@
               "target": "Package",
               "version": "[0.105.0, )"
             },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "RazorLight": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
             "Scriban": {
               "target": "Package",
               "version": "[6.2.1, )"

@@ -6,10 +6,35 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="ScribanTemplates\1_LoanPage.html" />
+		<EmbeddedResource Include="ScribanTemplates\2_VestingPage.html" />
+		<EmbeddedResource Include="ScribanTemplates\3_MTGPage.html" />
+		<EmbeddedResource Include="ScribanTemplates\4_JudgmentPage.html" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="ClosedXML" Version="0.105.0" />
-    <PackageReference Include="Scriban" Version="6.2.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="ClosedXML" Version="0.105.0" />
+		<PackageReference Include="RazorLight" Version="2.3.1" />
+		<PackageReference Include="Scriban" Version="6.2.1" />
+	</ItemGroup>
 
+	<ItemGroup>
+		<None Include="ScribanTemplates\1_LoanPage.html">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Output\" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<PreserveCompilationContext>true</PreserveCompilationContext>
+		<CopyRefAssembliesToPublishDirectory>true</CopyRefAssembliesToPublishDirectory>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
+	</ItemGroup>
 </Project>
+
