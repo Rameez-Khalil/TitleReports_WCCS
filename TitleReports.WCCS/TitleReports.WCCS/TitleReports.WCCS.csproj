@@ -15,6 +15,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="ClosedXML" Version="0.105.0" />
+		<PackageReference Include="DinkToPdf" Version="1.0.8" />
 		<PackageReference Include="RazorLight" Version="2.3.1" />
 		<PackageReference Include="Scriban" Version="6.2.1" />
 	</ItemGroup>
@@ -31,10 +32,17 @@
 	<PropertyGroup>
 		<PreserveCompilationContext>true</PreserveCompilationContext>
 		<CopyRefAssembliesToPublishDirectory>true</CopyRefAssembliesToPublishDirectory>
+		<PlatformTarget>x64</PlatformTarget>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Natve\libwkhtmltox.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 </Project>
 

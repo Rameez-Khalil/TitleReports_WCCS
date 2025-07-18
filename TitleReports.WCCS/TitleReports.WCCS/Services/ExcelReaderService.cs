@@ -278,7 +278,28 @@ namespace TitleReports.WCCS.Services
             return judgments;
         }
 
+        //Reads/populates disclosure page per asset.
 
+        public List<DisclosurePageModel> ReadDisclosureData(XLWorkbook workbook)
+        {
+            var disclosures = new List<DisclosurePageModel>();
+            var sheet = workbook.Worksheet("Sheet1");
+            if (sheet == null) return disclosures;
+
+            var rows = sheet.RangeUsed().RowsUsed().ToList();
+            if (rows.Count < 2) return disclosures;
+
+            var columnMap = PopulateHeader(rows[0]);
+
+            foreach (var row in rows.Skip(1))
+            {
+                var model = new DisclosurePageModel();
+                FillBaseFields(model, row, columnMap);  // This sets Client, Project, LoanNumber, etc.
+                disclosures.Add(model);
+            }
+
+            return disclosures;
+        }
 
 
 

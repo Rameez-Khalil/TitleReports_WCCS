@@ -360,3 +360,5 @@ C:\Users\LENOVO\Desktop\WLTIC\TItleReportsAutomation\TitleReports.WCCS\TitleRepo
 C:\Users\LENOVO\Desktop\WLTIC\TItleReportsAutomation\TitleReports.WCCS\TitleReports.WCCS\bin\Debug\net8.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\LENOVO\Desktop\WLTIC\TItleReportsAutomation\TitleReports.WCCS\TitleReports.WCCS\bin\Debug\net8.0\refs\WindowsBase.dll
 C:\Users\LENOVO\Desktop\WLTIC\TItleReportsAutomation\TitleReports.WCCS\TitleReports.WCCS\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+C:\Users\LENOVO\Desktop\WLTIC\TItleReportsAutomation\TitleReports.WCCS\TitleReports.WCCS\bin\Debug\net8.0\Natve\libwkhtmltox.dll
+C:\Users\LENOVO\Desktop\WLTIC\TItleReportsAutomation\TitleReports.WCCS\TitleReports.WCCS\bin\Debug\net8.0\DinkToPdf.dll
