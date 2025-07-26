@@ -19,7 +19,7 @@ public class RazorTemplateRenderer
 
         if (!Directory.Exists(razorTemplatesPath))
         {
-            Console.WriteLine($"❌ RazorTemplates folder not found at: {razorTemplatesPath}");
+            Console.WriteLine($"RazorTemplates folder not found at: {razorTemplatesPath}");
             return;
         }
 
@@ -33,7 +33,7 @@ public class RazorTemplateRenderer
     {
         if (_engine == null)
         {
-            Console.WriteLine("❌ Razor engine not initialized.");
+            Console.WriteLine("Razor engine not initialized.");
             return;
         }
 

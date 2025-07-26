@@ -16,7 +16,7 @@
     public string VestingIssue { get; set; }
     public string AOMChainIssue { get; set; }
     public string JudgmentBeforeLien { get; set; }
-    public string JudgmentAmount { get; set; }
+    public string? JudgmentAmount { get; set; }
     public string MuniLien { get; set; }
     public string MuniAmount { get; set; }
     public string SuperlienState { get; set; }

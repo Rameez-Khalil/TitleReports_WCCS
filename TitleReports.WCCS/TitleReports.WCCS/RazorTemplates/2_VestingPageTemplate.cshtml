@@ -93,24 +93,37 @@
 
         <div class="section-title">VESTING DEED INFORMATION</div>
 
-        <table class="info-table">
-            <tr><td><span class="label">Type of Deed:</span> @Model.Vesting.TypeOfDeed</td></tr>
-            <tr><td><span class="label">Grantee:</span> @Model.Vesting.Grantee</td></tr>
-            <tr><td><span class="label">Grantor:</span> @Model.Vesting.Grantor</td></tr>
-            <tr>
-                <td>
-                    <span class="label">Dated:</span> @Model.Vesting.Dated &nbsp;&nbsp;&nbsp;
-                    <span class="label">Recorded:</span> @Model.Vesting.Recorded
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span class="label">Recording Book:</span> @Model.Vesting.Book &nbsp;&nbsp;&nbsp;
-                    <span class="label">Page:</span> @Model.Vesting.Page &nbsp;&nbsp;&nbsp;
-                    <span class="label">Instrument:</span> @Model.Vesting.Instrument
-                </td>
-            </tr>
-        </table>
+        @if (Model.Vesting == null || (string.IsNullOrWhiteSpace(Model.Vesting.TypeOfDeed) &&
+                string.IsNullOrWhiteSpace(Model.Vesting.Grantee) &&
+                string.IsNullOrWhiteSpace(Model.Vesting.Grantor)))
+        {
+            <p style="margin: 20px 0; font-style: italic; font-size: 13px; text-align: center;">
+                There are no deeds recorded.
+            </p>
+        }
+        else
+        {
+            <table class="info-table">
+                <tr><td><span class="label">Type of Deed:</span> @Model.Vesting.TypeOfDeed</td></tr>
+                <tr><td><span class="label">Grantee:</span> @Model.Vesting.Grantee</td></tr>
+                <tr><td><span class="label">Grantor:</span> @Model.Vesting.Grantor</td></tr>
+                <tr>
+                    <td>
+                        <span class="label">Dated:</span> @Model.Vesting.Dated &nbsp;&nbsp;&nbsp;
+                        <span class="label">Recorded:</span> @Model.Vesting.Recorded
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="label">Recording Book:</span> @Model.Vesting.Book &nbsp;&nbsp;&nbsp;
+                        <span class="label">Page:</span> @Model.Vesting.Page &nbsp;&nbsp;&nbsp;
+                        <span class="label">Instrument:</span> @Model.Vesting.Instrument
+                    </td>
+                </tr>
+            </table>
+        }
+
+        
     </div>
 
     @* <footer>

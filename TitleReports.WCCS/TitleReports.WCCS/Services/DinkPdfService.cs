@@ -71,7 +71,7 @@ public class DinkPdfService
         {
             if (!File.Exists(htmlPath))
             {
-                Console.WriteLine($"⚠️ Skipping missing HTML file: {htmlPath}");
+                Console.WriteLine($" Skipping missing HTML file: {htmlPath}");
                 continue;
             }
 
@@ -108,7 +108,7 @@ public class DinkPdfService
         }
 
         _converter.Convert(doc);
-        Console.WriteLine($"✅ Combined PDF generated at: {outputPdfPath}");
+        Console.WriteLine($"Combined PDF generated at: {outputPdfPath}");
     }
 
     private string GetFooterPath()

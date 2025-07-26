@@ -58,6 +58,12 @@
             padding: 0 !important;
         }
 
+        .section-block {
+            page-break-inside: avoid;
+            break-inside: avoid;
+            margin-bottom: 20px; 
+        }
+
         footer {
             text-align: center;
             font-size: 12px;
@@ -92,88 +98,122 @@
             </tr>
         </table>
         <div class="section-title">MORTGAGE / DEED OF TRUST</div>
-        @foreach (var mtg in Model.MTGs)
+        @if (Model.MTGs!=null && Model.MTGs.Count<=0)
         {
-            if (mtg?.MTG == null || (string.IsNullOrWhiteSpace(mtg.MTG.Amount) && string.IsNullOrWhiteSpace(mtg.MTG.Lender)))
-            {
-                continue;
-            }
-
-            
-
-            <table class="info-table">
-                <tr style="text-align:center;">
-                    <td colspan="4"><span class="label">@mtg.MTG.Title</span></td>
-                </tr>
-            </table>
-
             <table class="info-table">
                 <tr>
-                    <td><span class="label">Amount:</span> @(decimal.TryParse(mtg.MTG.Amount, out var mtgAmt) ? mtgAmt.ToString("C", CultureInfo.GetCultureInfo("en-US")) : mtg.MTG.Amount)</td>
-
-                </tr>
-                <tr><td colspan="2"><span class="label">Borrower/Mortgagor:</span> @mtg.MTG.Borrower</td></tr>
-                <tr><td colspan="2"><span class="label">Lender/Beneficiary:</span> @mtg.MTG.Lender</td></tr>
-                <tr>
-                    <td colspan="2">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr>
-                                <td class="tight-cell"><span class="label">Dated:</span> @mtg.MTG.Dated</td>
-                                <td class="tight-cell"><span class="label">Recorded:</span> @mtg.MTG.Recorded</td>
-                                <td class="tight-cell"><span class="label">Maturity:</span> @mtg.MTG.Maturity</td>
-                                <td class="tight-cell"><span class="label">Open Ended:</span> @mtg.MTG.OpenEnded</td>
-                            </tr>
-                        </table>
+                    <td style="text-align: center; font-style: italic; font-size: 13px;">
+                        There are no MTGs recorded.
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="3">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr>
-                                <td class="tight-cell"><span class="label">Book:</span> @mtg.MTG.Book</td>
-                                <td class="tight-cell"><span class="label">Page:</span> @mtg.MTG.Page</td>
-                                <td class="tight-cell"><span class="label">Instrument:</span> @mtg.MTG.Instrument</td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr><td colspan="4"><span class="label">Notes:</span> @mtg.MTG.Notes</td></tr>
             </table>
+        }
 
-            @if (mtg.AOMs != null && mtg.AOMs.Any(a => !string.IsNullOrWhiteSpace(a.From) || !string.IsNullOrWhiteSpace(a.To)))
+        else
+        {
+            @foreach (var mtg in Model.MTGs)
             {
-                <div class="section-title">ASSIGNMENT OF MORTGAGE</div>
 
-                @for (int i = 0; i < mtg.AOMs.Count; i++)
+
+
+                if (mtg?.MTG == null || (string.IsNullOrWhiteSpace(mtg.MTG.Amount) && string.IsNullOrWhiteSpace(mtg.MTG.Lender)))
                 {
-                    var aom = mtg.AOMs[i];
+                    continue;
+                }
 
-                    if (string.IsNullOrWhiteSpace(aom.From) && string.IsNullOrWhiteSpace(aom.To))
-                        continue;
+                <div class="section-block">
 
                     <table class="info-table">
-                    <tr><td colspan="2"><span class="label">@($"{ToOrdinal(i + 1)} AOM From:")</span> @aom.From</td></tr>
-                    <tr><td colspan="2"><span class="label">@($"{ToOrdinal(i + 1)} AOM To:")</span> @aom.To</td></tr>
+                        <tr style="text-align:center;">
+                            <td colspan="4"><span class="label">@mtg.MTG.Title</span></td>
+                        </tr>
+                    </table>
 
+                    <table class="info-table">
                         <tr>
-                            <td><span class="label">Dated:</span> @aom.Dated</td>
-                            <td><span class="label">Recorded:</span> @aom.Recorded</td>
+                            <td><span class="label">Amount:</span> @(decimal.TryParse(mtg.MTG.Amount, out var mtgAmt) ? mtgAmt.ToString("C", CultureInfo.GetCultureInfo("en-US")) : mtg.MTG.Amount)</td>
+
+                        </tr>
+                        <tr><td colspan="2"><span class="label">Borrower/Mortgagor:</span> @mtg.MTG.Borrower</td></tr>
+                        <tr><td colspan="2"><span class="label">Lender/Beneficiary:</span> @mtg.MTG.Lender</td></tr>
+                        <tr>
+                            <td colspan="2">
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td class="tight-cell"><span class="label">Dated:</span> @mtg.MTG.Dated</td>
+                                        <td class="tight-cell"><span class="label">Recorded:</span> @mtg.MTG.Recorded</td>
+                                        <td class="tight-cell"><span class="label">Maturity:</span> @mtg.MTG.Maturity</td>
+                                        <td class="tight-cell"><span class="label">Open Ended:</span> @mtg.MTG.OpenEnded</td>
+                                    </tr>
+                                </table>
+                            </td>
                         </tr>
                         <tr>
                             <td colspan="3">
                                 <table style="width: 100%; border-collapse: collapse;">
                                     <tr>
-                                        <td class="tight-cell"><span class="label">Book:</span> @aom.Book</td>
-                                        <td class="tight-cell"><span class="label">Page:</span> @aom.Page</td>
-                                        <td class="tight-cell"><span class="label">Instrument:</span> @aom.Instrument</td>
+                                        <td class="tight-cell"><span class="label">Book:</span> @mtg.MTG.Book</td>
+                                        <td class="tight-cell"><span class="label">Page:</span> @mtg.MTG.Page</td>
+                                        <td class="tight-cell"><span class="label">Instrument:</span> @mtg.MTG.Instrument</td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
+                        <tr><td colspan="4"><span class="label">Notes:</span> @mtg.MTG.Notes</td></tr>
                     </table>
+                </div>
+
+              
+
+          
+                @if (mtg.AOMs != null && mtg.AOMs.Any(a => !string.IsNullOrWhiteSpace(a.From) || !string.IsNullOrWhiteSpace(a.To)))
+                {
+                   
+
+                    <div class="section-title">ASSIGNMENT OF MORTGAGE</div>
+
+                    @for (int i = 0; i < mtg.AOMs.Count; i++)
+                    {
+
+                        var aom = mtg.AOMs[i];
+
+                        if (string.IsNullOrWhiteSpace(aom.From) && string.IsNullOrWhiteSpace(aom.To))
+                            continue;
+
+                            <div class="section-block">
+
+                
+
+                        <table class="info-table">
+                            <tr><td colspan="2"><span class="label">@($"{ToOrdinal(i + 1)} AOM From:")</span> @aom.From</td></tr>
+                            <tr><td colspan="2"><span class="label">@($"{ToOrdinal(i + 1)} AOM To:")</span> @aom.To</td></tr>
+
+                            <tr>
+                                <td><span class="label">Dated:</span> @aom.Dated</td>
+                                <td><span class="label">Recorded:</span> @aom.Recorded</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <table style="width: 100%; border-collapse: collapse;">
+                                        <tr>
+                                            <td class="tight-cell"><span class="label">Book:</span> @aom.Book</td>
+                                            <td class="tight-cell"><span class="label">Page:</span> @aom.Page</td>
+                                            <td class="tight-cell"><span class="label">Instrument:</span> @aom.Instrument</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                    }
+               
                 }
+                      
             }
+            
         }
+
+       
     </div>
 
     @* <footer>
