@@ -40,12 +40,11 @@ public class RazorTemplateRenderer
         string result = await _engine.CompileRenderAsync(templateName, model);
         string outputPath = Path.Combine(_outputDirectory, fileName);
         await File.WriteAllTextAsync(outputPath, result);
-
-        Console.WriteLine($"Page Saved: {outputPath}");
     }
 
     public Task RenderLoanHtmlAsync(LoanPageModel loan)
     {
+        Console.WriteLine($"Rendering loan page");
         string fileName = $"{loan.LoanNumber}_{loan.FileNumber}_Loan.html";
         return RenderHtmlAsync(loan, "1_LoanPageTemplate.cshtml", fileName);
     }
@@ -58,7 +57,7 @@ public class RazorTemplateRenderer
             return;
         }
 
-        Console.WriteLine($"Rendering vesting for: {vesting.LoanNumber}");
+        Console.WriteLine($"Rendering vesting");
 
         string templateName = "2_VestingPageTemplate.cshtml";
         string result = await _engine.CompileRenderAsync(templateName, vesting);
@@ -68,7 +67,6 @@ public class RazorTemplateRenderer
 
         await File.WriteAllTextAsync(outputPath, result);
 
-        Console.WriteLine($"Vesting HTML saved to: {outputPath}");
     }
 
     public Task RenderMtgHtmlAsync(MTGDocumentModel mtgDocument)

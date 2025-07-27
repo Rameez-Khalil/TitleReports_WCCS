@@ -41,6 +41,7 @@ namespace TitleReports.WCCS.Services
                         PropertyState = GetValue(row, columnMap, "State"),
                         PropertyZip = GetValue(row, columnMap, "Zipcode"),
                         PropertyCounty = GetValue(row, columnMap, "County"),
+                        TaxID = GetValue(row, columnMap, "Parcel ID"), //parcel addition. 
 
                         LoanAmount = GetValue(row, columnMap, "Loan Amount"),
                         OriginationDate = GetDateOnly(row, columnMap, "Origination Date"),
@@ -50,13 +51,13 @@ namespace TitleReports.WCCS.Services
 
                         JudgmentBeforeLien = GetValue(row, columnMap, "Judgments Before Target"),
                         JudgmentAmount = GetValue(row, columnMap, "Total Judgments Before Lien"),
-                        
+
                         MuniLien = GetValue(row, columnMap, "Muni Lien"),
                         MuniAmount = GetValue(row, columnMap, "Muni Amount"),
 
                         HOASuperLien = GetValue(row, columnMap, "HOA Superlien"),
                         HOAAmount = GetValue(row, columnMap, "HOA Amount"),
-                        SuperlienState = GetValue(row, columnMap,"Superlien State"),
+                        SuperlienState = GetValue(row, columnMap, "Superlien State"),
                         Notes = GetValue(row, columnMap, "Notes")
                     };
 
@@ -157,7 +158,8 @@ namespace TitleReports.WCCS.Services
                     // ── Mortgage core fields ──
                     pageModel.MTG = new MortgageDetails
                     {
-                        Title = $"{ordinal} Mortgage",
+                        Type = GetValue(row, columnMap, mtgPrefix + "Type"),
+                        Title = $"{ordinal} Mortgage / DOT",
                         Amount = GetValue(row, columnMap, mtgPrefix + "Amount"),
                         InstrumentType = GetValue(row, columnMap, mtgPrefix + "Type"),
                         Borrower = GetValue(row, columnMap, mtgPrefix + "Borrower"),

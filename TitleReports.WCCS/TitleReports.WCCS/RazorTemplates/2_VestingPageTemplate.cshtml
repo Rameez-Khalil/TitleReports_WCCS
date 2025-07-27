@@ -64,6 +64,10 @@
             padding: 10px 0;
             margin-top: 40px;
         }
+        .inline-block {
+            display: inline-block;
+            margin-right: 30px;
+        }
     </style>
 </head>
 <body>
@@ -115,11 +119,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <span class="label">Recording Book:</span> @Model.Vesting.Book &nbsp;&nbsp;&nbsp;
-                        <span class="label">Page:</span> @Model.Vesting.Page &nbsp;&nbsp;&nbsp;
-                        <span class="label">Instrument:</span> @Model.Vesting.Instrument
+                        <span class="label" style="width:30%">Recording Book:</span> @Model.Vesting.Book &nbsp;&nbsp;&nbsp;
+                        <span class="label" style="width:30%">Page:</span> @Model.Vesting.Page &nbsp;&nbsp;&nbsp;
+                        <span class="label" style="width:30%">Instrument:</span> @Model.Vesting.Instrument
                     </td>
                 </tr>
+
+
             </table>
         }
 

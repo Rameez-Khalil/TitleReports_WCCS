@@ -97,16 +97,23 @@
                 </td>
             </tr>
         </table>
+
+
+        <!--MTG Validity check-->
+        @{
+            var hasValidMtgs = Model.MTGs != null &&
+            Model.MTGs.Any(m => m?.MTG != null &&
+            (!string.IsNullOrWhiteSpace(m.MTG.Amount) ||
+            !string.IsNullOrWhiteSpace(m.MTG.Lender)));
+        }
+
         <div class="section-title">MORTGAGE / DEED OF TRUST</div>
-        @if (Model.MTGs!=null && Model.MTGs.Count<=0)
+
+        @if (!hasValidMtgs)
         {
-            <table class="info-table">
-                <tr>
-                    <td style="text-align: center; font-style: italic; font-size: 13px;">
-                        There are no MTGs recorded.
-                    </td>
-                </tr>
-            </table>
+            <p style="margin: 20px 0; font-style: italic; font-size: 13px; text-align: center;">
+                There are no MTGs recorded.
+            </p>
         }
 
         else
@@ -130,6 +137,8 @@
                     </table>
 
                     <table class="info-table">
+                        <tr><td colspan="2"><span class="label">Type:</span> @mtg.MTG.Type</td></tr>
+
                         <tr>
                             <td><span class="label">Amount:</span> @(decimal.TryParse(mtg.MTG.Amount, out var mtgAmt) ? mtgAmt.ToString("C", CultureInfo.GetCultureInfo("en-US")) : mtg.MTG.Amount)</td>
 
@@ -180,7 +189,7 @@
                         if (string.IsNullOrWhiteSpace(aom.From) && string.IsNullOrWhiteSpace(aom.To))
                             continue;
 
-                            <div class="section-block">
+                         <div class="section-block">
 
                 
 

@@ -8,6 +8,7 @@
     public string PropertyAddress { get; set; } 
     public string PropertyCity { get; set; }
     public string PropertyState { get; set; }
+    public string TaxID { get; set; }
     public string PropertyZip { get; set; }
     public string PropertyCounty { get; set; }
     public string LoanAmount { get; set; }

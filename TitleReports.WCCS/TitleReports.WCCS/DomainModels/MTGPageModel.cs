@@ -7,6 +7,7 @@
 public class MortgageDetails
 {
     public string Title { get; set; }
+    public string Type { get; set; }
     public string InstrumentType { get; set; }
     public string Amount { get; set; }
     public string Borrower { get; set; }

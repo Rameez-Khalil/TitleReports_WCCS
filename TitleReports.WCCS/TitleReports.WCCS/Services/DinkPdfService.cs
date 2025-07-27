@@ -108,7 +108,6 @@ public class DinkPdfService
         }
 
         _converter.Convert(doc);
-        Console.WriteLine($"Combined PDF generated at: {outputPdfPath}");
     }
 
     private string GetFooterPath()

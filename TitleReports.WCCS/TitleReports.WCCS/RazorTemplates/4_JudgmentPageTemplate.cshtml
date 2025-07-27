@@ -82,6 +82,12 @@
             margin-top: 40px;
         }
 
+        .section-block {
+            page-break-inside: avoid;
+            break-inside: avoid;
+            margin-bottom: 20px;
+        }
+
        
 
        
@@ -116,11 +122,18 @@
         @if (Model.Judgments != null && Model.Judgments.Count > 0)
         {
             <div class="section-title">JUDGMENT INFORMATION</div>
-            <table class="info-table" style="margin-bottom:5px">
                 @for (int i = 0; i < Model.Judgments.Count; i++)
                 {
+                
+
                     var jdg = Model.Judgments[i];
-                    <tbody class="judgment-entry">
+
+                    <div class="section-block">
+
+        
+                    <table class="info-table">
+
+                    <tbody class="info-table">
                         <tr>
                             <td><span class="label">@ToOrdinal(i + 1) Judgment Type:</span> @jdg.Type</td>
                             <td><span class="label">Amount:</span> @(decimal.TryParse(jdg.Amount, out var amt) ? amt.ToString("C", CultureInfo.GetCultureInfo("en-US")) : jdg.Amount)</td>
@@ -140,8 +153,11 @@
                         </tr>
                         <tr class="spacer-row"><td colspan="4">&nbsp;</td></tr>
                     </tbody>
+                    </table>
+                </div>
+     
+
                 }
-            </table>
         }
         else
         {
